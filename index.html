@@ -8,6 +8,7 @@
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet">
   <style>
     .hero-section {
+      position: relative;
       background: url('/assets/img/PXL_20240124_090553118.jpg') no-repeat center center;
       background-size: cover;
       color: white;
@@ -15,6 +16,25 @@
       display: flex;
       justify-content: center;
       align-items: center;
+    }
+
+    /* Overlay for darkening and blurring */
+    .hero-section::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.5); /* Gelap (darken) dengan opacity */
+      filter: blur(5px); /* Efek blur */
+      z-index: 1;
+    }
+
+    /* Content on top of the hero section */
+    .hero-section .container {
+      position: relative;
+      z-index: 2; /* Biar konten tetap terlihat di atas efek blur */
     }
   </style>
 </head>
@@ -91,14 +111,14 @@
     </div>
   </section>
 
-  <!-- About Section -->
+    <!-- About Section -->
   <section id="about" class="bg-light p-5">
     <div class="container">
       <h2 class="text-center">Tentang Kami</h2>
       <p class="lead text-center">Ngopikode adalah agensi perangkat lunak profesional yang membantu bisnis tumbuh dengan solusi teknologi terbaik.</p>
       <div class="row">
         <div class="col-md-6">
-          <p>Dengan pengalaman bertahun-tahun di industri, tim ahli kami menawarkan berbagai layanan yang disesuaikan dengan kebutuhan spesifik Anda. Apakah Anda membutuhkan situs web kustom, aplikasi internal, atau integrasi sistem, kami siap membantu.</p>
+          <p>Tim kami yang terdiri dari para ahli menawarkan berbagai layanan yang disesuaikan dengan kebutuhan spesifik Anda. Apakah Anda membutuhkan situs web kustom, aplikasi internal, atau integrasi sistem, kami siap membantu.</p>
         </div>
         <div class="col-md-6">
           <p>Misi kami adalah memberikan solusi berkualitas tinggi yang memenuhi tujuan bisnis Anda. Kami bangga dengan pendekatan profesional kami, portofolio yang terbukti, dan layanan pelanggan yang responsif. Bergabunglah dengan Ngopikode untuk mewujudkan visi bisnis Anda dengan teknologi terkini.</p>
