@@ -1,4 +1,1 @@
-User-agent: *
-Allow: /
-
 Sitemap: https://ngopikode.my.id/sitemap.xml
