@@ -21,11 +21,7 @@ export default function Services() {
               <a href="service-details.html" className="stretched-link">
                 <h3>Creative Tech Solutions</h3>
               </a>
-              <ul className="text-start list-group">
-                <li className="list-group-item bg-dark text-light">
-                  <p>Menciptakan solusi digital inovatif yang ringan namun berdampak besar.</p>
-                </li>
-              </ul>
+              <p>Menciptakan solusi digital inovatif yang ringan namun berdampak besar.</p>
             </div>
           </div>
 
@@ -37,11 +33,7 @@ export default function Services() {
               <a href="service-details.html" className="stretched-link">
                 <h3>EdTech & Personal Development</h3>
               </a>
-              <ul className="text-start list-group">
-                <li className="list-group-item bg-dark text-light">
-                  <p>Pengembangan platform edukasi dan aplikasi untuk peningkatan diri.</p>
-                </li>
-              </ul>
+              <p>Pengembangan platform edukasi dan aplikasi untuk peningkatan diri.</p>
             </div>
           </div>
 
@@ -53,11 +45,7 @@ export default function Services() {
               <a href="service-details.html" className="stretched-link">
                 <h3>Digital Solutions for UMKM</h3>
               </a>
-              <ul className="text-start list-group">
-                <li className="list-group-item bg-dark text-light">
-                  <p>Solusi digitalisasi untuk UMKM agar lebih efisien dan kompetitif.</p>
-                </li>
-              </ul>
+              <p>Solusi digitalisasi untuk UMKM agar lebih efisien dan kompetitif.</p>
             </div>
           </div>
 
@@ -69,11 +57,7 @@ export default function Services() {
               <a href="service-details.html" className="stretched-link">
                 <h3>IoT & AgriTech</h3>
               </a>
-              <ul className="text-start list-group">
-                <li className="list-group-item bg-dark text-light">
-                  <p>Inovasi teknologi IoT untuk pertanian cerdas dan solusi industri.</p>
-                </li>
-              </ul>
+              <p>Inovasi teknologi IoT untuk pertanian cerdas dan solusi industri.</p>
             </div>
           </div>
 

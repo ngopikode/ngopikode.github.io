@@ -15,7 +15,7 @@ export default function Footer() {
                 <p>Cemara Street, Cemara Asri, Sampali</p>
                 <p>North Sumatra 20371, ID</p>
 
-                <p><em>ngopikode dikenal juga sebagai "ngopi kode"</em></p>
+                <p className="mt-3"><em>ngopikode dikenal juga sebagai "ngopi kode"</em></p>
 
                 <p className="mt-3"><strong>Phone:</strong> <span>+62 851-7244-1544</span></p>
                 <p><strong>Email:</strong> <span>ngopikode01@gmail.com</span></p>
@@ -54,7 +54,7 @@ export default function Footer() {
               <p>Subscribe to our newsletter and receive the latest news about our products and services!</p>
               <form action="forms/newsletter.php" method="post" className="php-email-form">
                 <div className="newsletter-form">
-                  <input type="email" name="email" /><input type="submit" value="Subscribe" />
+                  <input type="email" name="email" placeholder="Enter your email" /><input type="submit" value="Subscribe" />
                 </div>
                 <div className="loading">Loading</div>
                 <div className="error-message"></div>
@@ -71,10 +71,10 @@ export default function Footer() {
           <p>© <span>All Rights Reserved</span><strong className="px-1 sitename">SINERGI KODE KREATIF, PTP</strong></p>
           <div className="credits">
             Powered by
-            <a href="https://www.ngopikode.my.id/">
+            <a href="https://www.ngopikode.my.id/" className="ms-1">
               <strong>ngopikode</strong>
               <img src="https://avatars.githubusercontent.com/u/182346406?s=400&u=40c038c350b2df3658b189025cb1c4bb43a85bfa&v=4"
-                alt="Sinergi Kode Kreatif, PTP Logo" width="30" height="30" />
+                alt="Sinergi Kode Kreatif, PTP Logo" width="24" height="24" className="ms-1 rounded-circle" />
             </a>
           </div>
         </div>
