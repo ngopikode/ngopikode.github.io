@@ -9,41 +9,41 @@ export default defineConfig({
     obfuscator({
       global: true,
       options: {
+        // --- PERFORMANCE OPTIMIZED SETTINGS ---
+        
+        // Compact code (Essential)
         compact: true,
-        controlFlowFlattening: true,
-        controlFlowFlatteningThreshold: 0.75,
-        deadCodeInjection: true,
-        deadCodeInjectionThreshold: 0.4,
-        debugProtection: false,
-        debugProtectionInterval: 0,
-        disableConsoleOutput: true,
-        identifierNamesGenerator: 'hexadecimal',
-        log: false,
-        numbersToExpressions: true,
-        renameGlobals: false,
-        selfDefending: true,
-        simplify: true,
-        splitStrings: true,
-        splitStringsChunkLength: 10,
-        stringArray: true,
-        stringArrayCallsTransform: true,
-        stringArrayCallsTransformThreshold: 0.75,
-        stringArrayEncoding: ['base64'],
-        stringArrayIndexShift: true,
+        
+        // HEAVY FEATURES DISABLED (To save RAM & CPU)
+        controlFlowFlattening: false, 
+        deadCodeInjection: false,
+        numbersToExpressions: false,
+        simplify: false,
+        splitStrings: false,
+        stringArrayCallsTransform: false,
+        
+        // LIGHTWEIGHT PROTECTION (Good enough for most cases)
+        identifierNamesGenerator: 'hexadecimal', // Renames variables to _0x1234
+        stringArray: true,                       // Extracts strings to an array
         stringArrayRotate: true,
         stringArrayShuffle: true,
-        stringArrayWrappersCount: 2,
-        stringArrayWrappersChainedCalls: true,
-        stringArrayWrappersParametersMaxCount: 4,
-        stringArrayWrappersType: 'function',
-        stringArrayThreshold: 0.75,
-        transformObjectKeys: true,
+        stringArrayIndexShift: true,
+        
+        // Basic protections
+        disableConsoleOutput: true,
+        selfDefending: true,
+        debugProtection: false,
+        
+        // Misc
+        log: false,
+        renameGlobals: false,
+        transformObjectKeys: false, // Disabled to save RAM
         unicodeEscapeSequence: false
       }
     })
   ],
   build: {
-    minify: 'terser', // Use terser for minification
+    minify: 'terser',
     terserOptions: {
         compress: {
             drop_console: true,
