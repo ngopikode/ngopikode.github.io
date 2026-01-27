@@ -11,6 +11,7 @@ import ServiceCreativeTech from './components/ServiceCreativeTech';
 import ServiceEdTech from './components/ServiceEdTech';
 import ServiceUMKM from './components/ServiceUMKM';
 import ServiceIoT from './components/ServiceIoT';
+import Faq from './components/Faq';
 
 // Import libraries
 import AOS from 'aos';
@@ -88,6 +89,13 @@ function App() {
       }
       initIsotope();
 
+      // FAQ Toggle Logic
+      document.querySelectorAll('.faq-item h3, .faq-item .faq-toggle').forEach((faqItem) => {
+        faqItem.addEventListener('click', () => {
+          faqItem.parentNode.classList.toggle('faq-active');
+        });
+      });
+
       // Scroll Top Button Logic
       const scrollTop = document.querySelector('.scroll-top');
       const toggleScrollTop = () => {
@@ -156,6 +164,7 @@ function App() {
         <Features />
         <Services />
         <CallToAction />
+        <Faq />
         <Contact />
       </main>
       <Footer />
