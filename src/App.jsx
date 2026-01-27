@@ -7,6 +7,10 @@ import Services from './components/Services';
 import CallToAction from './components/CallToAction';
 import Contact from './components/Contact';
 import Footer from './components/Footer';
+import ServiceCreativeTech from './components/ServiceCreativeTech';
+import ServiceEdTech from './components/ServiceEdTech';
+import ServiceUMKM from './components/ServiceUMKM';
+import ServiceIoT from './components/ServiceIoT';
 
 // Import libraries
 import AOS from 'aos';
@@ -126,6 +130,22 @@ function App() {
       };
 
   }, []);
+
+  // Simple routing logic based on window.location.pathname
+  const path = window.location.pathname;
+
+  if (path === '/service/creative-tech') {
+    return <ServiceCreativeTech />;
+  }
+  if (path === '/service/edtech') {
+    return <ServiceEdTech />;
+  }
+  if (path === '/service/umkm') {
+    return <ServiceUMKM />;
+  }
+  if (path === '/service/iot') {
+    return <ServiceIoT />;
+  }
 
   return (
     <>
