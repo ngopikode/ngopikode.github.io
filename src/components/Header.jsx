@@ -28,9 +28,23 @@ export default function Header() {
         document.body.classList.toggle('mobile-nav-active');
     };
 
-    const handleNavLinkClick = () => {
+    const handleNavLinkClick = (e, hash) => {
         if (isMobileNavActive) {
             toggleMobileNav();
+        }
+
+        // If we are on the home page, handle smooth scroll
+        if (window.location.pathname === '/') {
+            e.preventDefault();
+            const element = document.querySelector(hash);
+            if (element) {
+                element.scrollIntoView({ behavior: 'smooth' });
+                // Update URL without reload
+                window.history.pushState(null, null, hash);
+            }
+        } else {
+            // If we are on another page, let the default behavior happen (navigate to /#hash)
+            // The App.jsx useEffect will handle the scroll after navigation
         }
     };
 
@@ -49,10 +63,10 @@ export default function Header() {
 
                 <nav id="navmenu" className="navmenu">
                     <ul>
-                        <li><a href="#hero" className="active" onClick={handleNavLinkClick}>Home<br/></a></li>
-                        <li><a href="#about" onClick={handleNavLinkClick}>About</a></li>
-                        <li><a href="#services" onClick={handleNavLinkClick}>Services</a></li>
-                        <li><a href="#contact" onClick={handleNavLinkClick}>Contact</a></li>
+                        <li><a href="/#hero" className="active" onClick={(e) => handleNavLinkClick(e, '#hero')}>Home<br/></a></li>
+                        <li><a href="/#about" onClick={(e) => handleNavLinkClick(e, '#about')}>About</a></li>
+                        <li><a href="/#services" onClick={(e) => handleNavLinkClick(e, '#services')}>Services</a></li>
+                        <li><a href="/#contact" onClick={(e) => handleNavLinkClick(e, '#contact')}>Contact</a></li>
                     </ul>
                     <i
                         className={`mobile-nav-toggle d-xl-none bi ${isMobileNavActive ? 'bi-x' : 'bi-list'}`}
@@ -60,7 +74,7 @@ export default function Header() {
                     ></i>
                 </nav>
 
-                <a className="btn-getstarted" href="#about">Get Started</a>
+                <a className="btn-getstarted" href="/#about" onClick={(e) => handleNavLinkClick(e, '#about')}>Get Started</a>
 
             </div>
         </header>

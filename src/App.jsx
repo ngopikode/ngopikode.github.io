@@ -132,6 +132,16 @@ function App() {
         setTimeout(removePreloader, 1000);
       }
 
+      // Handle Hash Scroll on Load
+      if (window.location.hash) {
+        const element = document.querySelector(window.location.hash);
+        if (element) {
+          setTimeout(() => {
+            element.scrollIntoView({ behavior: 'smooth' });
+          }, 100);
+        }
+      }
+
       return () => {
         window.removeEventListener('load', toggleScrollTop);
         document.removeEventListener('scroll', toggleScrollTop);
