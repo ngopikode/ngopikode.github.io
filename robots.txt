@@ -1,1 +1,4 @@
-Sitemap: https://ngopikode.my.id/sitemap.xml
+User-agent: *
+Allow: /
+
+Sitemap: https://ngopikode.com/sitemap.xml
