@@ -118,7 +118,8 @@ export default function ServiceUMKM() {
                             </p>
 
                             <div className="d-flex flex-wrap gap-3">
-                                <a href="/#contact" className="btn rounded-pill px-5 py-3 hover-lift"
+                                <a href="https://umkm.ngopikode.com" target="_blank"
+                                   className="btn rounded-pill px-5 py-3 hover-lift"
                                    style={styles.btnPrimary}>
                                     Coba Sekarang <i className="bi bi-arrow-right-short ms-1"></i>
                                 </a>
